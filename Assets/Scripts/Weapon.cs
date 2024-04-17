@@ -44,6 +44,6 @@ public class Weapon : MonoBehaviour
     {
         GameObject impact = Instantiate(hitEffect, hit.point, 
                                         Quaternion.LookRotation(hit.normal));
-        //Destroy(impact, 1);
+        Destroy(impact, 1);
     }
 }
