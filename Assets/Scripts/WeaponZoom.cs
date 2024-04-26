@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class WeaponZoom : MonoBehaviour
 {
-    [SerializeField] Camera fpsCamera;
+    //CinemachineVirtualCamera camera;
     float zoomedOutFOV = 60f;
     float zoomedInFOV = 20f;
     bool zoomedInToggle = false;
 
-    private void Update()
+    public void Zoom(bool zoomedIn)
     {
-        if (Input.GetMouseButtonDown(1)) {
-            zoomedInToggle = !zoomedInToggle;
-            camera.fieldOfView = (zoomedInToggle ? zoomedInFOV : zoomedOutFOV);
-        }
+        //camera.m_Lens.FieldOfView = zoomedInToggle ? zoomedInFOV : zoomedOutFOV;
     }
+
+    /*private void Update()
+    {
+        if (Input.GetButtonDown("Fire2")) {
+            zoomedInToggle = !zoomedInToggle;
+            GetComponent<Camera>().fieldOfView = (zoomedInToggle ? zoomedInFOV : zoomedOutFOV);
+        }
+    }*/
 }

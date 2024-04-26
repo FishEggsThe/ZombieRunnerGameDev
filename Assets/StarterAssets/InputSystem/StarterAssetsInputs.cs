@@ -43,6 +43,11 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnZoom(InputValue value)
+        { 
+            ZoomInput(value.isPressed);
+        }
 #endif
 
 
@@ -64,6 +69,12 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		private void ZoomInput(bool valueIsPressed)
+		{
+			WeaponZoom weaponZoom = GetComponent<WeaponZoom>();
+			weaponZoom.Zoom(valueIsPressed);
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)
