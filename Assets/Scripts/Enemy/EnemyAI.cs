@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    Transform target;
     NavMeshAgent navMeshAgent;
     EnemyHealth health;
     float distanceToTarget = Mathf.Infinity;
@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        target = FindFirstObjectByType<PlayerHealth>().transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<EnemyHealth>();
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     PlayerHealth target;
-    float damage = 40f;
+    float damage = 25f;
 
     void Start()
     {
