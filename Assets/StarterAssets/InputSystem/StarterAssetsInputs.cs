@@ -73,8 +73,8 @@ namespace StarterAssets
 
 		private void ZoomInput(bool valueIsPressed)
 		{
-			WeaponZoom weaponZoom = GetComponent<WeaponZoom>();
-			weaponZoom.Zoom(valueIsPressed);
+			//WeaponZoom weaponZoom = GetComponent<WeaponZoom>();
+			//weaponZoom.Zoom(valueIsPressed);
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)
